@@ -1,4 +1,4 @@
-#  Garden Angel for Arduino Uno release 0.1
+#  Garden Angel for Arduino Uno
 
 The garden angel is an electronic system that monitor air humidity,
 temperature and light. Data is acquired every second. Due to the low
@@ -47,9 +47,9 @@ and to build charts in any CSV capable software.
 
 [push button circuit](https://www.arduino.cc/en/tutorial/pushbutton)
 
-## The Garden Angel Circuit v0.1
+## The Garden Angel Circuit
 
-![Garden Angel Circuit v0.1](garden_angel_0.1_circuit.jpg?raw=true "Garden Angel Circuit v0.1")
+![Garden Angel Circuit](garden_angel_0.1_circuit.jpg?raw=true "Garden Angel Circuit v0.1")
 
 ## Messages produced on the serial console 
 
