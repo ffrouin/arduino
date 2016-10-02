@@ -6,16 +6,16 @@ level of available memory on board, system is actually able to store
 36 hours of data with a point every 28 minutes. Data stored is an average
 value of the collected data over the storage period.
 
-You can adujst the history length and the archive size of your board as
+You can adujst the history length and the archive size if your board as
 more memory available, you may get best data resolution in the data
 history. Do not forget to recompile with your local time in order the
 board to report correct timestamp. All this has to be configured in the
 history.h file :
 
-	time_t LOCAL_TIME=1475394875;
+	time_t LOCAL_TIME=1475397109; // 2 oct 2016, 10:31:~47 (UTC+0200)
 	
-	const int HIST_CAPACITY=76;
-	float HIST_LENGTH=86400*1.5;
+	const int HIST_CAPACITY=76; // history table index size
+	float HIST_LENGTH=86400*1.5; // history length in seconds
 	int HIST_PERIOD=int (HIST_LENGTH/HIST_CAPACITY);
 
 The board will report to you on the serial console the number of day available
