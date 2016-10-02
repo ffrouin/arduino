@@ -35,8 +35,6 @@
 
 const int  buttonPin = 4;
 
-int firstRun = 0;
-
 void setup() {
   Serial.begin(115200);
   Serial.println(F("Garden Angel v0.2 - Freddy Frouin <freddy@linuxtribe.fr>"));
@@ -50,24 +48,21 @@ void setup() {
   Serial.println(F("  Data acquired every second : average values are pushed to history"));
   Serial.println();
   Serial.println(F("push the button to display the history or to show last values collected on the 7 segments digit"));
+
+  /* DHT11 pin setup */
+  pinMode(BROCHE_DHT11, INPUT_PULLUP);
+  /* 7 segment led pin setup */
+  for (int i=13;i>5;i--) { pinMode(i, OUTPUT); }
+  /* button pin setup */
+  pinMode(buttonPin, INPUT);
+  display_message("hello - garden angel 0.2 - freddy.frouin at linuxtribe.fr ", 100);
+  /* init local clock */
+  setTime(LOCAL_TIME+7200);
 }
 
 float tempAVG = -1, humAVG = -1, lightAVG = -1;
 
-void loop() {
-   if (firstRun == 0) {
-    firstRun = 1;
-    /* DHT11 pin setup */
-    pinMode(BROCHE_DHT11, INPUT_PULLUP);
-    /* 7 segment led pin setup */
-    for (int i=13;i>5;i--) { pinMode(i, OUTPUT); }
-    /* button pin setup */
-    pinMode(buttonPin, INPUT);
-    display_message("hello - garden angel 0.2 - freddy.frouin at linuxtribe.fr ", 100);
-    /* init local clock */
-    setTime(LOCAL_TIME+7200);
-   }
-  
+void loop() {  
   // put your main code here, to run repeatedly: 
   float temperature, humidity, light;
 
