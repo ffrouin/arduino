@@ -1,5 +1,5 @@
 /*
-  Garden Angel for Arduino Uno release 0.1
+  Garden Angel for Arduino Uno release 0.2
 
   DHT11 : humidity and temperature sensor
     + 100nF capacitor
@@ -39,7 +39,7 @@ int firstRun = 0;
 
 void setup() {
   Serial.begin(115200);
-  Serial.println(F("Garden Angel v0.1 - Freddy Frouin <freddy@linuxtribe.fr>"));
+  Serial.println(F("Garden Angel v0.2 - Freddy Frouin <freddy@linuxtribe.fr>"));
   Serial.println();
   Serial.print(F("  Data History length : "));
   Serial.print(HIST_LENGTH/86400);
@@ -50,8 +50,12 @@ void setup() {
   Serial.println(F("  Data acquired every second : average values are pushed to history"));
   Serial.println();
   Serial.println(F("push the button to display the history or to show last values collected on the 7 segments digit"));
+}
 
-  if (firstRun == 0) {
+float tempAVG = -1, humAVG = -1, lightAVG = -1;
+
+void loop() {
+   if (firstRun == 0) {
     firstRun = 1;
     /* DHT11 pin setup */
     pinMode(BROCHE_DHT11, INPUT_PULLUP);
@@ -59,15 +63,12 @@ void setup() {
     for (int i=13;i>5;i--) { pinMode(i, OUTPUT); }
     /* button pin setup */
     pinMode(buttonPin, INPUT);
-    display_message("hello - garden angel 0.1 - freddy.frouin at linuxtribe.fr ", 100);
+    display_message("hello - garden angel 0.2 - freddy.frouin at linuxtribe.fr ", 100);
     /* init local clock */
     setTime(LOCAL_TIME+7200);
-  }
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-  float tempAVG = -1, humAVG = -1, lightAVG = -1; 
+   }
+  
+  // put your main code here, to run repeatedly: 
   float temperature, humidity, light;
 
   float buttonState = digitalRead(buttonPin);
@@ -115,7 +116,7 @@ void loop() {
   }
 
   /* if data stored to history DB then we reset average counters */
-  if (storeData(humAVG, tempAVG, lightAVG)) {
+  if (storeData(humAVG, tempAVG, lightAVG) == 1) {
     humAVG = -1;
     tempAVG = -1;
     lightAVG = -1;

@@ -5,9 +5,9 @@
 
 */
 
-time_t LOCAL_TIME=1475394875;
+time_t LOCAL_TIME=1475404745;
 
-const int HIST_CAPACITY=76;
+const int HIST_CAPACITY=75;
 float HIST_LENGTH=86400*1.5;
 int HIST_PERIOD=int (HIST_LENGTH/HIST_CAPACITY);
 
@@ -80,9 +80,9 @@ int storeData(float h, float t, float l) {
        histFull = 1;
       }
       
-      return(1);
+      return 1;
     }
-    return(0);
+    return 0;
 }
 
 void flushHistory() {
