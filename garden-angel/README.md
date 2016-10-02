@@ -12,10 +12,6 @@ Pushing the garden angel button will also result in a CSV table conveniently
 displayed on the serial console to allow end-users to cut & paste results
 and to build charts in any CSV capable software.
 
-## The circuit
-
-![Garden Angel Circuit v0.1](garden_angel_0.1_circuit.jpg?raw=true "Garden Angel Circuit v0.1")
-
 ## Required hardware
 
   Arduino Uno board
@@ -46,6 +42,10 @@ and to build charts in any CSV capable software.
     http://circuitdigest.com/microcontroller-projects/7-segment-display-interfacing-with-arduino
 
     https://www.arduino.cc/en/tutorial/pushbutton
+
+## The Garden Angel Circuit v0.1
+
+![Garden Angel Circuit v0.1](garden_angel_0.1_circuit.jpg?raw=true "Garden Angel Circuit v0.1")
 
 ## Messages produced on the serial console 
 
@@ -79,3 +79,11 @@ for data storage and the history resolution in minutes.
 To display the history, just push the button on board until next data
 acquisition and you'll get a CSV output of collected data on the serial
 console of the board.
+
+## CSV Output
+
+	date;humidity(%);temperature(°C);light(%);index
+	1/10/2016 9:54:35;43.00;22.00;90.00;0
+	1/10/2016 10:23:0;42.00;22.00;92.00;1
+	1/10/2016 10:51:26;42.00;22.00;94.00;2
+
