@@ -8,6 +8,10 @@ value of the collected data over the storage period. The board is also able
 to report last measured values on the 7 segments digit when a user push
 the garden angel button.
 
+Pushing the garden angel button will also result in a CSV table conveniently
+displayed on the serial console to allow end-users to cut & paste results
+and to build charts in any CSV capable software.
+
 ## The circuit
 
 ![Garden Angel Circuit v0.1](garden_angel_0.1_circuit.jpg?raw=true "Garden Angel Circuit v0.1")
