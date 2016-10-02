@@ -28,3 +28,13 @@
     http://circuitdigest.com/microcontroller-projects/7-segment-display-interfacing-with-arduino
     https://www.arduino.cc/en/tutorial/pushbutton
 
+## Messages produced on the serial console 
+
+Garden Angel v0.1 - Freddy Frouin <freddy@linuxtribe.fr>
+
+  Data History length : 1.50 day
+  Data History resolution : 28 minutes
+  Data acquired every second : average values are pushed to history
+
+push the button to display the history or to show last values collected on the 7 segments digit
+
