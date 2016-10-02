@@ -8,7 +8,18 @@ value of the collected data over the storage period.
 
 You can adujst the history length and the archive size of your board as
 more memory available, you may get best data resolution in the data
-history.
+history. Do not forget to recompile with your local time in order the
+board to report correct timestamp. All this has to be configured in the
+history.h file :
+
+	time_t LOCAL_TIME=1475394875;
+	
+	const int HIST_CAPACITY=76;
+	float HIST_LENGTH=86400*1.5;
+	int HIST_PERIOD=int (HIST_LENGTH/HIST_CAPACITY);
+
+The board will report to you on the serial console the number of day available
+for data storage and the history resolution in minutes.
 
 To display the history, just push the button on board until next data
 acquisition and you'll get a CSV output of collected data on the serial
