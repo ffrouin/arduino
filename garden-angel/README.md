@@ -39,13 +39,13 @@ and to build charts in any CSV capable software.
 
 ## Sources used to build this project :
 
-    [Photoresistor sensor circuit](https://nakkaya.com/2009/10/29/connecting-a-photoresistor-to-an-arduino/)
+[Photoresistor sensor circuit](https://nakkaya.com/2009/10/29/connecting-a-photoresistor-to-an-arduino/)
 
-    [DHT11 sensor circuit](https://www.carnetdumaker.net/articles/utiliser-un-capteur-de-temperature-et-dhumidite-dht11-dht22-avec-une-carte-arduino-genuino/#le-capteur-dht22-et-son-petit-frere-le-dht11)
+[DHT11 sensor circuit](https://www.carnetdumaker.net/articles/utiliser-un-capteur-de-temperature-et-dhumidite-dht11-dht22-avec-une-carte-arduino-genuino/#le-capteur-dht22-et-son-petit-frere-le-dht11)
 
-    [7 segments display circuit](http://circuitdigest.com/microcontroller-projects/7-segment-display-interfacing-with-arduino)
+[7 segments display circuit](http://circuitdigest.com/microcontroller-projects/7-segment-display-interfacing-with-arduino)
 
-    [push button circuit](https://www.arduino.cc/en/tutorial/pushbutton)
+[push button circuit](https://www.arduino.cc/en/tutorial/pushbutton)
 
 ## The Garden Angel Circuit v0.1
 
@@ -53,15 +53,13 @@ and to build charts in any CSV capable software.
 
 ## Messages produced on the serial console 
 
-Garden Angel v0.1 - Freddy Frouin <freddy@linuxtribe.fr>
+	Garden Angel v0.1 - Freddy Frouin <freddy@linuxtribe.fr>
 
-  Data History length : 1.50 day
+	Data History length : 1.50 day
+	Data History resolution : 28 minutes
+	Data acquired every second : average values are pushed to history
 
-  Data History resolution : 28 minutes
-
-  Data acquired every second : average values are pushed to history
-
-push the button to display the history or to show last values collected on the 7 segments digit
+	push the button to display the history or to show last values collected on the 7 segments digit
 
 ## Configure clock and adjust size of data history tables
 
